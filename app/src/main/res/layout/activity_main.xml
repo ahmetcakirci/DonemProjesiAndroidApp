@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+    <LinearLayout
+        android:id="@+id/top_linear_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true" >
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kullanıcı Adı:"
+            android:textColor="#000000"
+            android:id="@+id/textViewUserNameLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#f44336"
+            android:id="@+id/textViewUserName" ></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kullanıcı Soyadı:"
+            android:textColor="#000000"
+            android:id="@+id/textViewUserSurnameLabel" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#f44336"
+            android:id="@+id/textViewUserSurname" />
+    </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#000000"
+            android:id="@+id/latituteField" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#000000"
+                android:id="@+id/longitudeField" />
+        </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:src="@drawable/refresh"
+            android:id="@+id/btnGPSRefresh"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Servisi Başlat"
+            android:id="@+id/btnServiceStart"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+    </LinearLayout>
+    <fragment
+        android:id="@+id/haritafragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_linear_layout_id"
+        class="com.google.android.gms.maps.SupportMapFragment" />
+    <LinearLayout
+        android:id="@+id/LinearLayout02"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/btnAnlikLokasyon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#f44336"
+            android:textColor="#ffffff"
+            android:paddingTop="5sp"
+            android:height="60dp"
+            android:textSize="13dp"
+            android:text="Anlık Lokasyon"
+            >
+        </Button>
+        <Button
+            android:id="@+id/btnGecmisLokasyon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:textColor="#000000"
+            android:paddingTop="5sp"
+            android:height="60dp"
+            android:textSize="13dp"
+            android:text="Geçmiş Lokasyon">
+        </Button>
+    </LinearLayout>
+</RelativeLayout>
